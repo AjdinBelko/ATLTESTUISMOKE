@@ -13,27 +13,34 @@ describe("Delete user", () => {
     });  
 
     it('Deletes the user', () => {
-        // Click on the user in the table
-        cy.get('.contactTableBodyRow > :nth-child(2)')
+      // click on the suer and assertions
+      cy.get('.contactTableBodyRow > :nth-child(2)')
           .should('contain.text', 'John Doe')
           .click();
     
-        // Wait for contact details to appear
-        cy.contains('Contact Details');        
-            // Verify if the form fields contain the expected values
-            cy.get('#contactDetails').should('be.visible');
-        
-            // Check for edit, delete, and return
-
-            cy.get('#edit-contact').should('be.visible');
-            cy.get('#delete').should('be.visible');
-            cy.get('#return').should('be.visible');
-
-
-            //proceeds to delete the user if needed and added back via smoke test
-
-            cy.get('#delete').should('be.visible').click();
-
-        });
-        
-    }); 
+    
+          //wait for the assertions and new loads 
+    
+          cy.contains('Contact Details');
+    
+        //get the form 
+    
+        cy.get('#contactDetails').should('be.visible');
+    
+      // Check for edit, delete, and return
+    
+      //edit
+      cy.get('#edit-contact').should('be.visible');
+      //delete
+      cy.get('#delete').should('be.visible');
+      //return
+      cy.get('#return').should('be.visible');
+    
+      
+      // Delete the user
+      cy.get('#delete').should('be.visible').click();
+    
+      // Assert that the user is deleted
+      cy.get('.contactTableBodyRow').should('not.contain', 'John Doe');
+    });
+  });    
