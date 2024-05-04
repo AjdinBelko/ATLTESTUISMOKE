@@ -1,5 +1,5 @@
 describe("Smoke Test - User Delete", () => {
-    // Assuming you've already set up the authentication token
+    // envoriement token
     const authToken = Cypress.env('authToken');
   
     it("should delete the current user", () => {
