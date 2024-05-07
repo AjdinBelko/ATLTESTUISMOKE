@@ -1,0 +1,126 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 1,
+    "pending": 0,
+    "failures": 1,
+    "start": "2024-05-07T15:16:51.252Z",
+    "end": "2024-05-07T15:16:59.399Z",
+    "duration": 8147,
+    "testsRegistered": 2,
+    "passPercent": 50,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "f851a99c-0292-443d-91e4-048f83126cee",
+      "title": "",
+      "fullFile": "cypress/e2e/All/delete-User.cy.js",
+      "file": "cypress/e2e/All/delete-User.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "41eae060-ef15-4523-960a-5a32630b544e",
+          "title": "Delete user",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Welcome page loaded accordingly",
+              "fullTitle": "Delete user Welcome page loaded accordingly",
+              "timedOut": null,
+              "duration": 2035,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.contains(\"Contact List\");\ncy.url().should('eq', 'https://thinking-tester-contact-list.herokuapp.com/');",
+              "err": {},
+              "uuid": "37fae2a5-f831-47a5-ac8c-4f4586829ff8",
+              "parentUUID": "41eae060-ef15-4523-960a-5a32630b544e",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Deletes the user",
+              "fullTitle": "Delete user Deletes the user",
+              "timedOut": null,
+              "duration": 6060,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "// click on the suer and assertions\ncy.get('.contactTableBodyRow > :nth-child(2)').should('contain.text', 'John Doe').click();\n//wait for the assertions and new loads \ncy.contains('Contact Details');\n//get the form \ncy.get('#contactDetails').should('be.visible');\n// Check for edit, delete, and return\n//edit\ncy.get('#edit-contact').should('be.visible');\n//delete\ncy.get('#delete').should('be.visible');\n//return\ncy.get('#return').should('be.visible');\n// Delete the user\ncy.get('#delete').should('be.visible').click();\n// Assert that the user is deleted\ncy.get('.contactTableBodyRow').should('not.contain', 'John Doe');",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: expected '<td>' to contain text 'John Doe', but the text was 'Test User'",
+                "estack": "AssertionError: Timed out retrying after 4000ms: expected '<td>' to contain text 'John Doe', but the text was 'Test User'\n    at Context.eval (webpack://atlant/./cypress/e2e/All/delete-User.cy.js:18:11)",
+                "diff": "- 'Test User'\n+ 'John Doe'\n"
+              },
+              "uuid": "80f40ba1-3e15-4bfd-a402-c736d5949761",
+              "parentUUID": "41eae060-ef15-4523-960a-5a32630b544e",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "37fae2a5-f831-47a5-ac8c-4f4586829ff8"
+          ],
+          "failures": [
+            "80f40ba1-3e15-4bfd-a402-c736d5949761"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 8095,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports/mocha"
+      },
+      "version": "6.2.0"
+    }
+  }
+}
