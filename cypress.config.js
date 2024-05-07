@@ -10,4 +10,6 @@ module.exports = defineConfig({
     },
     baseUrl: 'https://thinking-tester-contact-list.herokuapp.com',
   },
-})
+
+  chromeWebSecurity: false
+});

@@ -1,6 +1,6 @@
 // Import commands
 
-describe("Login Test - new user TEST DATA 2 CREATION", () => {
+describe("Login Test - new user TEST DATA 2", () => {
     beforeEach(() => {
       // Login and navigate to the page
       cy.login("ajdin.belko95@gmail.com", "Belkon12345");
