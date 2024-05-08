@@ -32,3 +32,6 @@ Api documetation and task description was:
   With a tool or programming/scripting language (JMeter, Python, Ruby, Java, Javascript...), automate the smoke test from #2 (it is plus if you are using some testing framework in any of the       listed programming/scripting languages)
   create Github repository and push your assignment solution with the documentation on how to run the automated tests there
   Report bugs if you find any, with detailed steps to reproduce
+
+
+  additional test pushed to the main brach
