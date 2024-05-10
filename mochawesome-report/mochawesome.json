@@ -1,0 +1,100 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-05-10T17:14:04.079Z",
+    "end": "2024-05-10T17:14:06.256Z",
+    "duration": 2177,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "0d19c987-0144-4b69-ad6a-f9e88266aed3",
+      "title": "",
+      "fullFile": "cypress/e2e/UIchecker&loader/redirectionCancelRegistration.cy.js",
+      "file": "cypress/e2e/UIchecker&loader/redirectionCancelRegistration.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "12e05f3b-3db3-4476-b121-e32a67207391",
+          "title": "Another Test",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Test with Button Click",
+              "fullTitle": "Another Test Test with Button Click",
+              "timedOut": null,
+              "duration": 2141,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// Click the cancel button\ncy.get('#cancel').should('be.visible').click();\ncy.url().should('include', '/login');\ncy.contains('Contact List App');",
+              "err": {},
+              "uuid": "68969cb4-3c62-4e55-a22c-9e8eb23f6152",
+              "parentUUID": "12e05f3b-3db3-4476-b121-e32a67207391",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "68969cb4-3c62-4e55-a22c-9e8eb23f6152"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 2141,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": null,
+      "version": "6.2.0"
+    }
+  }
+}
