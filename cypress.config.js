@@ -11,5 +11,12 @@ module.exports = defineConfig({
     baseUrl: 'https://thinking-tester-contact-list.herokuapp.com',
   },
 
-  chromeWebSecurity: false
+  chromeWebSecurity: false,
+
+  // reporter mocha config
+  reporter: 'mochawesome',
+  reporterOptions: {
+    reportDir: 'cypress/reports/mocha'
+  }
+  
 });
