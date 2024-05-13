@@ -13,10 +13,8 @@ describe("Network Errors Test", () => {
   
       // Wait for the request to complete (or timeout)
       cy.wait('@loginRequest5');
-  
-      // Assertion: Verify that the application displays an appropriate error message
-      // Use cy.get() to target a specific element that appears during a server timeout
-      cy.get('.timeout-message').should('be.visible', { timeout: 40000 }); // Adjust selector as needed
+      
+      cy.get('.timeout-message').should('be.visible', { timeout: 40000 }); 
     });
   });
   
