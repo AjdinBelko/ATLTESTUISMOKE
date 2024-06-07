@@ -8,7 +8,7 @@ describe("Login Test - Get created user", () => {
   });
 
   it("should display correct table content and fetch contacts via API", () => {
-    // Intercept contacts api provajdano
+    // Intercept contacts api provajdanoo
     cy.intercept('GET', '/contacts').as('getContacts');
 
     // Wait for the page to load and check za loading page
