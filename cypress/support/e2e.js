@@ -21,5 +21,4 @@ import './commands'
 
 import 'cypress-plugin-api'
 
-require('cypress-plugin-api')
 
