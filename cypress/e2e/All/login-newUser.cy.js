@@ -40,7 +40,7 @@ describe("Login Test - new user", () => {
 
     // Make a request to fetch all contacts
     const authToken = Cypress.env('authToken');
-    cy.request({
+    cy.api({
       method: 'GET',
       url: 'https://thinking-tester-contact-list.herokuapp.com/contacts',
       headers: {

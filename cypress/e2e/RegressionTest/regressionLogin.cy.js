@@ -1,6 +1,6 @@
 describe("Login Test", () => {
     it("should log in the user and display the welcome screen", () => {
-      cy.request({
+      cy.api({
         method: 'POST',
         url: 'https://thinking-tester-contact-list.herokuapp.com/users/login',
         body: {

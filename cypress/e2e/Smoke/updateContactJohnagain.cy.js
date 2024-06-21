@@ -16,7 +16,7 @@ describe("Smoke Test - Update Contact", () => {
   
     it("updates a contact with provided data", () => {
 
-      cy.request({
+      cy.api({
         method: 'GET',
         url: 'https://thinking-tester-contact-list.herokuapp.com/contacts',
         headers: {
@@ -29,7 +29,7 @@ describe("Smoke Test - Update Contact", () => {
   
         const contactId = response.body[0]._id;
   
-cy.request({
+cy.api({
     method: 'PUT',
     url: `https://thinking-tester-contact-list.herokuapp.com/contacts/${contactId}`,
     body: updatedContactData,

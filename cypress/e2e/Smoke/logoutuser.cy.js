@@ -6,7 +6,7 @@ describe("Smoke Test - Logout User", () => {
         
         // Log out the user via smoke test
 
-        cy.request({
+        cy.api({
             method: 'POST',
             url: 'https://thinking-tester-contact-list.herokuapp.com/users/logout',
             headers: {

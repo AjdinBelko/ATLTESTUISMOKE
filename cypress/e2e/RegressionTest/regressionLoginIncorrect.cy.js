@@ -1,7 +1,7 @@
 describe("Login Regression Test", () => {
     it("should display 'Incorrect username or password' message with invalid credentials", () => {
       // Attempt login with invalid credentials
-      cy.request({
+      cy.api({
         method: 'POST',
         url: 'https://thinking-tester-contact-list.herokuapp.com/users/login',
         failOnStatusCode: false, // Allow the test to continue even if the request fails

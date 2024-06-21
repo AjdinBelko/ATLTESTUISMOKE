@@ -20,7 +20,7 @@ describe('API Smoke Test with Cypress', () => {
     };
 
     // Send a POST request to create a contact
-    cy.request({
+    cy.api({
       method: 'GET',
       url: 'https://thinking-tester-contact-list.herokuapp.com/contacts/',
       body: requestBody,

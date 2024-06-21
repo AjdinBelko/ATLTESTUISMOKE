@@ -5,7 +5,7 @@ describe("Login Regression Test", () => {
       const maxLengthPassword = 'p'.repeat(72); // Maximum password length 
   
       // Attempt login with maximum length email and password
-      cy.request({
+      cy.api({
         method: 'POST',
         url: 'https://thinking-tester-contact-list.herokuapp.com/users/login',
         failOnStatusCode: false, // Allow the test to continue 

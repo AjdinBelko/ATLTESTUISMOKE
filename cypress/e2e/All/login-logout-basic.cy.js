@@ -14,7 +14,7 @@ describe("User Authentication and Logout", () => {
     it("Logs out the user", () => {
         const authToken = Cypress.env('authToken');
         // Logout the user
-        cy.request({
+        cy.api({
             method: 'POST',
             url: 'https://thinking-tester-contact-list.herokuapp.com/users/logout',
             headers: {

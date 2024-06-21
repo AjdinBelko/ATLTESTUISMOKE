@@ -44,7 +44,7 @@ describe('Get user smoke', () => {
       const authToken = Cypress.env('authToken');
   
       // Send a GET request to retrieve the contact
-      cy.request({
+      cy.api({
         method: 'GET',
         url: 'https://thinking-tester-contact-list.herokuapp.com/contacts/',
         headers: {

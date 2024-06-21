@@ -6,7 +6,7 @@ describe("Smoke Test - Update User", () => {
     const updateData = require('./updateUserData.json');
   
     it("should update the current user", () => {
-      cy.request({
+      cy.api({
         method: 'PATCH',
         url: 'https://thinking-tester-contact-list.herokuapp.com/users/me',
         headers: {

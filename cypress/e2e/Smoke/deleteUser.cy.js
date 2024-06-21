@@ -3,7 +3,7 @@ describe("Smoke Test - User Delete", () => {
     const authToken = Cypress.env('authToken');
   
     it("should delete the current user", () => {
-      cy.request({
+      cy.api({
         method: 'DELETE',
         url: 'https://thinking-tester-contact-list.herokuapp.com/users/me',
         headers: {
